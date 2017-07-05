@@ -132,7 +132,9 @@ polymer login for reddit
         last_error: String,
 
       },
-
+      listeners: {
+        "click":"login"
+      },
       _token_headers:function(client_id, client_secret){
         return {Authorization: "Basic " + btoa(client_id + ":" + client_secret)};
       },
